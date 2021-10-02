@@ -1,0 +1,43 @@
+[Pass] No suspicious behavior detected during the entire exam.
+
+[Fail] The following issues have been found during the exam:- ID Photo is unreadable or not taken. Other than this issue no suspicious behavior detected during the entire exam.
+
+[Fail] The following issues have been found during the exam:-
+
+[Fail] The following issues have been found during the exam:- All three videos were failed in the middle of the exam
+
+[Fail] The following issues have been found during the exam:- ID Photo was not taken. Webcam failed.
+
+[Fail] The following issues have been found during the exam:- Webcam and mobile camera failed in the middle of the exam
+
+[Fail] The following issues have been found during the exam:- Student used external application for spell checks
+
+[Fail] The following issues have been found during the exam:- Screenshare failed
+
+[Fail] The following issues have been found during the exam:- Screenshare and mobile camera failed
+
+[Fail] The following issues have been found during the exam:- Screenshare and webcam failed
+
+
+time name st name commnt
+
+2722
+
+2723
+
+2724
+
+lIn317@#sHa
+
+116208
+
+
+24 7
+25 9
+27 9
+28 1
+30 8
+31 8
+1  3
+2  15
+2  1
