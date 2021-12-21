@@ -17,7 +17,7 @@ import json
 import os
 
 
-DRIVER_PATH = '/home/webguy/chromedriver/96/chromedriver'
+DRIVER_PATH = '/home/gsoft/chromedriver/96/chromedriver'
 BASE_URL = 'https://juicebox.money/#/p/constitutiondao'
 BASE_FOLDER = '/media/webguy/ubstrg/permitted_storage/VSCODE_GIT/python-scripts/juicebox_scrap/Downloads/'
 
@@ -65,7 +65,7 @@ def dev_db(saver_d = {}):
 def driver_return():
     driver = get_driver()
     driver.get(BASE_URL)
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(1)
     time.sleep(20)
     return driver
 
@@ -106,7 +106,7 @@ def get_comments(start_count, end_count, driver):
             container_xpath = f'//*[@id="root"]/section/main/div/div[1]/div[3]/div[2]/div/div[2]/div[{end_count+1}]'
             container_elem = driver.find_element(By.XPATH, container_xpath)
             container_elem.click()
-            time.sleep(20)
+            time.sleep(10)
 
             start_count = end_count+1
             end_count = end_count + 50
@@ -120,13 +120,14 @@ def get_comments(start_count, end_count, driver):
 
 def get_comments_2(start_count, end_count, driver):
     for div_index in range(start_count, end_count+1):
+        print(div_index)
         end_loop = False
         if div_index == end_count:
             end_loop = True
         else:
             container_xpath = f'//*[@id="root"]/section/main/div/div[1]/div[3]/div[2]/div/div[2]/div[{div_index}]/div[2]/span/span'
             end_loop = False
-        if start_count > 1300:
+        if start_count > 3400:
             try:
                 container_elem = driver.find_element(By.XPATH, container_xpath)
                 comment_text = container_elem.text
@@ -155,12 +156,12 @@ def get_comments_2(start_count, end_count, driver):
             container_xpath = f'//*[@id="root"]/section/main/div/div[1]/div[3]/div[2]/div/div[2]/div[{end_count+1}]'
             container_elem = driver.find_element(By.XPATH, container_xpath)
             container_elem.click()
-            time.sleep(20)
+            time.sleep(7)
 
             start_count = end_count+1
             end_count = end_count + 50
             # Call this recursively
-            if end_count < 3050:
+            if end_count < 4050:
                 get_comments_2(start_count, end_count, driver)
             else:
                 driver.close()
