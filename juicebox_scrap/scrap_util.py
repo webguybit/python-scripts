@@ -17,7 +17,7 @@ import json
 import os
 
 
-DRIVER_PATH = '/home/gsoft/chromedriver/96/chromedriver'
+DRIVER_PATH = '/home/webguy/chromedriver/96/chromedriver'
 BASE_URL = 'https://juicebox.money/#/p/constitutiondao'
 BASE_FOLDER = '/media/webguy/ubstrg/permitted_storage/VSCODE_GIT/python-scripts/juicebox_scrap/Downloads/'
 
@@ -127,7 +127,7 @@ def get_comments_2(start_count, end_count, driver):
         else:
             container_xpath = f'//*[@id="root"]/section/main/div/div[1]/div[3]/div[2]/div/div[2]/div[{div_index}]/div[2]/span/span'
             end_loop = False
-        if start_count > 3400:
+        if start_count > 4000:
             try:
                 container_elem = driver.find_element(By.XPATH, container_xpath)
                 comment_text = container_elem.text
@@ -161,7 +161,7 @@ def get_comments_2(start_count, end_count, driver):
             start_count = end_count+1
             end_count = end_count + 50
             # Call this recursively
-            if end_count < 4050:
+            if end_count < 10050:
                 get_comments_2(start_count, end_count, driver)
             else:
                 driver.close()
