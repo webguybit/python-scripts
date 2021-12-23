@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function()
     roughness:0.3,
   })
 
-  var geometry = new THREE.CylinderGeometry(3,3,0.4,100);
+  var geometry = new THREE.CylinderGeometry(3,3,0.2,100);
   const mesh = new THREE.Mesh(geometry,material)
 
   scene.add(mesh)
