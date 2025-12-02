@@ -1,0 +1,15 @@
+# PDF Processing Packages
+PyPDF2
+pdfplumber
+PyMuPDF
+reportlab
+
+# Dependencies (auto-installed)
+Pillow
+pdfminer.six
+pypdfium2
+charset-normalizer
+cryptography
+cffi
+pycparser
+
